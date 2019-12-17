@@ -1,0 +1,46 @@
+<div class="jumbotron" style="width: 100%;">
+        <h1>Pesquisar Gestores
+            <i class="fas fa-search"></i>
+        </h1>
+        <hr>
+        <label for="inputPesquisarGestores">Pesquisa de gestores </label>
+        <div class="input-group md form-group">
+            <input class="form-control" type="number" ng-model="gestoresPesquisaCtrl.codigoPesquisaGestor" id="inputPesquisarGestor"
+                placeholder="Informe o código do gestor ou clique em pesquisar para buscar todos">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" ng-click="gestoresPesquisaCtrl.pesquisarGestor()" id="pesquisarGestor">
+                    <i class="fa fa-search"></i> Pesquisar
+                </button>
+            </div>
+            <table class="table table-hover text-center" style="background-color: white; margin-top: 30px;" ng-if="gestoresPesquisaCtrl.gestoresPesquisados.length > 0" style="margin-top: 30px;">
+                <thead>
+                    <tr>
+                        <th><a href="">#</a></th>
+                        <th><a href="">Código</a></th>
+                        <th><a href="">Nome</a></th>
+                        <th><a href="">Matrícula</a></th>
+                        <th><a href="">Setor</a></th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat='gestor in gestoresPesquisaCtrl.gestoresPesquisados track by $index'>
+                    <td>
+                        <a href="" ng-click="gestoresPesquisaCtrl.editarGestor(gestor)">
+                            <i class="fas fa-edit" style="color: black"></i>
+                        </a>
+                        <a href="" ng-click="gestoresPesquisaCtrl.excluirGestor(gestor, $index)">
+                            <i class="fas fa-trash" style="color: black"></i>
+                        </a>
+                    </td>
+                    <td>{{ gestor.id }}</td>
+                    <td>{{ gestor.nome }}</td>
+                    <td>{{ gestor.matricula }}</td>
+                    <td>{{ gestor.setor.nomeSetor }}</td>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <hr>
+        <button class="btn btn-primary pull-left" ng-click="gestoresPesquisaCtrl.voltar()" id="botaoVoltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+        </button>
+    </div>

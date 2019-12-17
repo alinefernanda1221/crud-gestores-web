@@ -1,0 +1,61 @@
+<div class="jumbotron">
+<!--     <h1>Cadastrar Gestor
+        <i class="">{{ gestorCadCtrl.teste }}</i>
+    </h1>
+    <hr> -->
+    <div class="justify-content-center">
+        <form ng-submit="gestorCadCtrl.cadastrarGestor()" id="cadastro-gestor" name="gestorCadCtrl.formCadGestor" 
+              class="form-group" novalidate data-parsley-validate>
+
+              <div class="card">
+                  <div class="card-header">
+                      <h2>
+                          Cadastro Gestores
+                          <i class="fa fa-user-plus"></i>
+                      </h2>
+                  </div>
+                  <div class="card-body">
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <label class="control-label" for="nome">Nome:</label>
+                                    <input class="form-control" type="text" id="nome" name="nome" required
+                                           ng-model="gestorCadCtrl.gestor.nome" data-parsley-error-message="{{ gestorCadCtrl.mensagemCampoObrigatorio }}">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label" for="dataNascimento">Data Nascimento:</label>
+                                  <input class="form-control" type="date" id="dataNascimento" name="dataNascimento" required
+                                         ng-model="gestorCadCtrl.gestor.dataNascimento" data-parsley-error-message="{{ gestorCadCtrl.mensagemCampoObrigatorio }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="control-label" for="setor">Setor</label>
+                                    <select class="form-control" id="select" name="setor" ng-model="gestorCadCtrl.gestor.setor.id" required=""
+                                            data-parsley-error-message="{{ gestorCadCtrl.mensagemCampoObrigatorio }}">
+                                        <option ng-repeat="setor in gestorCadCtrl.setores" value="{{ setor.id }}">
+                                            {{ setor.nomeSetor }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label" for="matricula">Matrícula</label>
+                                    <input class="form-control" type="number" id="matricula" name="matricula" required limit-to="6"
+                                           ng-model="gestorCadCtrl.gestor.matricula" data-parsley-error-message="{{ gestorCadCtrl.mensagemCampoObrigatorio }}">
+                                </div>
+                            </div>
+                            <hr width="100%">
+                            <div class="footer">
+                                <button class="btn btn-primary" type="button" id="voltar" name="voltar" ng-click="gestorCadCtrl.voltar()">
+                                    <i class="fa fa-arrow-left"></i> Voltar
+                                </button>
+                                <button class="btn btn-success float-right" type="submit" id="cadastrar" name="cadastrar">
+                                    <i class="fa fa-save"></i> Cadastrar
+                                </button>
+                            </div>
+                  </div>
+              </div>
+              
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="jumbotron">
+    <div class="justify-content-center">
+        <form ng-submit="gestoresEdicaoCtrl.atualizarGestor()" id="atualizar-gestor" name="gestoresEdicaoCtrl.formAtualizaGestor"
+            class="form-group" novalidate data-parsley-validate>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        Editar Gestor ID#{{ gestoresEdicaoCtrl.gestor.id }}
+                        <i class="fa fa-user-edit"></i>
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label" for="nome">Nome:</label>
+                            <input class="form-control" type="text" id="nome" name="nome" required
+                                ng-model="gestoresEdicaoCtrl.gestor.nome" data-parsley-error-message="{{ gestoresEdicaoCtrl.mensagemCampoObrigatorio }}">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label" for="dataNascimento">Data Nascimento:</label>
+                            <input class="form-control" type="date" id="dataNascimento" name="dataNascimento" required
+                                ng-model="gestoresEdicaoCtrl.gestor.dataNascimento" data-parsley-error-message="{{ gestoresEdicaoCtrl.mensagemCampoObrigatorio }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label" for="setor">Setor</label>
+                            <select class="form-control" id="select" name="setor"
+                                ng-model="gestoresEdicaoCtrl.setor" required="" data-parsley-error-message="{{ gestoresEdicaoCtrl.mensagemCampoObrigatorio }}">
+                                <option ng-repeat="setor in gestoresEdicaoCtrl.setores" value="{{ setor.id }}">
+                                    {{ setor.nomeSetor }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label" for="matricula">Matrícula</label>
+                            <input class="form-control" type="number" id="matricula" name="matricula" required limit-to="6"
+                                ng-model="gestoresEdicaoCtrl.gestor.matricula" data-parsley-error-message="{{ gestoresEdicaoCtrl.mensagemCampoObrigatorio }}">
+                        </div>
+                    </div>
+                    <hr width="100%">
+                    <div class="footer">
+                        <button class="btn btn-primary" type="button" id="voltar" name="voltar"
+                            ng-click="gestoresEdicaoCtrl.voltar()">
+                            <i class="fa fa-arrow-left"></i> Voltar
+                        </button>
+                        <button class="btn btn-success float-right" type="submit" id="atualizar" name="atualizar">
+                            <i class="fa fa-save"></i> Atualizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
