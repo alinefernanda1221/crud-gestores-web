@@ -10,6 +10,7 @@ module.exports = {
     contentBase: path.join(__dirname,"/src/"),
     port:8000,
     watchContentBase: true,
+    disableHostCheck: true
   },
   module: {
     
