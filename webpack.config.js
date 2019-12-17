@@ -10,11 +10,6 @@ module.exports = {
     contentBase: path.join(__dirname,"/src/"),
     port:8000,
     watchContentBase: true,
-    // headers: {
-    //   "Access-Control-Allow-Origin": "*",
-    //   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-    //   "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-    // }
   },
   module: {
     

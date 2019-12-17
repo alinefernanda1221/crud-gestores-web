@@ -1,11 +1,12 @@
 {
-  "name": "teste",
+  "name": "crud-gestores",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crud de desafio para a poupex.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --inline --hot",
     "start": "webpack-dev-server --open --inline --hot --config webpack.config.js",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -27,13 +28,22 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "angular": "^1.7.5",
     "angular-block-ui": "^0.2.2",
     "angular-ui-bootstrap": "^2.5.6",
     "angular-ui-mask": "^1.8.7",
     "angular-ui-router": "^1.0.23",
+    "autoprefixer": "^9.7.1",
     "awesome-bootstrap-checkbox": "^1.0.1",
     "bootstrap": "^4.3.1",
+    "css-loader": "^2.1.0",
+    "exports-loader": "^0.7.0",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "http-server": "^0.12.0",
     "jquery": "^3.4.1",
@@ -43,19 +53,11 @@
     "node-sass": "^4.13.0",
     "parsleyjs": "^2.9.1",
     "popper.js": "^1.16.0",
-    "webpack-dev-server": "^3.9.0",
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-regular-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "autoprefixer": "^9.7.1",
-    "css-loader": "^2.1.0",
-    "exports-loader": "^0.7.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
