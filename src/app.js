@@ -9,8 +9,6 @@ import parsley from 'parsleyjs';
 let blockUI = require('angular-block-ui');
 let uiMask = require('angular-ui-mask');
 let uiBootstrap = require('angular-ui-bootstrap');
-// let ngStorage = require('ngstorage-webpack');
-
 
 /**ESTILOS E FRAMEWORKS VISUAIS */
 import 'bootstrap';

@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'src')
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     contentBase: path.join(__dirname,"/src/"),
@@ -38,6 +39,14 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.ico$/,
+        use: 'raw-loader'
+      },
+      {
+        test: /\.png$/,
+        use: 'raw-loader'
       }
     ]
   }

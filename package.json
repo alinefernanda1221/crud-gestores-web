@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --mode production --config ./webpack.config.js",
+    "build": "webpack --mode production",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
