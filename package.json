@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --mode production",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
-    "postinstall": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "webpack -p --config ./webpack.config-prod.js --progress",
+    "dev": "webpack-dev-server --open --inline --hot --config webpack.config-dev.js",
+    "prod": "npx webpack --config webpack.config-prod.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +24,7 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },

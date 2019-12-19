@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -6,12 +7,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
-  },
-  devServer: {
-    contentBase: path.join(__dirname,"/src/"),
-    port:8000,
-    watchContentBase: true,
-    disableHostCheck: true
   },
   module: {
     
@@ -39,14 +34,6 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
-      },
-      {
-        test: /\.ico$/,
-        use: 'raw-loader'
-      },
-      {
-        test: /\.png$/,
-        use: 'raw-loader'
       }
     ]
   }
